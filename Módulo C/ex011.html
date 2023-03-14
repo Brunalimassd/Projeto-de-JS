@@ -7,6 +7,22 @@
     <title>Somando Números</title>
 </head>
 <body>
-    
+    <h1>Somando Valores</h1>
+    <input type="number" name="txn1" id="txn1">
+    <input type="number" name="txn2" id="txn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar(){
+           var n1 =  document.getElementById('txn1')
+           var n2 = document.querySelector('input#txn2')
+           var res = document.getElementById('res')
+           var n1 = Number(txn1.value)
+           var n2 = Number(txn2.value)
+           var s = n1 + n2
+           res.innerHTML = `A soma entre ${n1} + ${n2} é igual a ${s}`
+
+        }
+    </script>
 </body>
 </html>
