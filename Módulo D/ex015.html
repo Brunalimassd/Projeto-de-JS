@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habilitação</title>
+    <title>Resultado</title>
     <style>
         body>h1 {
             text-align: center;
@@ -15,31 +15,25 @@
 </head>
 
 <body>
-    <h1>Habilitação</h1>
-       Idade: <input type="number" name="num" id="num">
-       <input type="button" value="Verificar" onclick="verificar()">
-       
-       
-       <div id="res">
-    
-       </div>
+    <h1>Resultado das Avaliações</h1>
+    Nota: <input type="number" name="num" id="num">
+    <input type="button" value="Verficar" onclick="Calcular()">
 
+    <div id="res"></div>
 
-        <script>
-             function verificar(){
-                var idade = document.getElementById('num').value
-                var res = document.getElementById('res')
-                res.innerHTML = `Sua idade é <strong>${idade}</strong>`
-                if(idade > 18){
-                    res.innerHTML += '<p> <strong>Pode retirar a Carteira</strong> </p>'
-                } else {
-                    res.innerHTML += '<p> Não pode retirar a <strong>carteira</strong></p>'
-                }
-                
-                 
-             }
+    <script>
+        function Calcular(){
+            var num = document.getElementById('num')
+            var res = document.getElementById('res')
+            res.innerHTML = `Parabéns pelo seu esforço`
+            if (num.value >= 5){
+            res.innerHTML += `<p> Voce foi Aprovado</p>`
+            } else 
+            res.innerHTML += `<p> Voce foi Reprovado</p>`
+        }
+    </script>
         
-       </script>
+      
 
      
 </body>
