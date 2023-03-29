@@ -1,16 +1,8 @@
-/*
-var num = [6, 5, 3, 8, 9]
-console.log(`O vetor tem ${num.length} posicoes`)
-num.sort()
-console.log(num)
+let num  = [5, 8, 9, 6]
+num.push(3)
 
-var valores = [0, 1, 6, 4, 6, 3]
-for(var pos=0; pos < valores.length; pos++){
-    console.log(`A posicão ${pos} tem o valor ${valores[pos]}`)
-}
-*/
-var valores = [0, 1, 6, 4, 9, 3]
-valores.sort()
-for(let pos in valores){
-    console.log(`A posicão ${pos} tem o valor ${valores[pos]}`)
-}
+console.log(num)
+console.log(`O vetor tem ${num.length} indices `)
+
+let pos = num.indexOf(5)
+console.log(`O valor 5 esta na posição ${pos}`)
